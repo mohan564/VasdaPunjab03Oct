@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="9"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainLayout"
+    tools:context=".MainActivity">
+
+<android.support.v7.widget.Toolbar
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:id="@+id/toolBar"
+    android:layout_weight="0"
+    android:background="@color/colorPrimary"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+</android.support.v7.widget.Toolbar>
+
+   <FrameLayout
+       android:layout_width="match_parent"
+       android:id="@+id/frameLayout"
+       android:layout_weight="9"
+       android:layout_height="match_parent">
+
+   </FrameLayout>
+
+
+
+
+    <android.support.design.widget.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation_view"
+        android:background="?android:windowBackground"
+        android:layout_gravity="bottom"
+        android:layout_weight="0"
+        app:menu="@menu/bottom_nav_menu"
+        android:theme="@style/BottomNavigatioTheme"
+        app:itemBackground="@color/colorPrimary"
+        app:itemIconTint="@color/TextOnPrimary"
+        app:itemTextColor="@color/TextOnPrimary"
+        ></android.support.design.widget.BottomNavigationView>
+
+
+</LinearLayout>

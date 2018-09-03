@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:orderInCategory="1"></item>
+
+    <item android:id="@+id/ayp"
+        android:title="AYP"
+        android:icon="@drawable/ic_ask_parents_24dp"
+        android:orderInCategory="2"></item>
+
+    <item android:id="@+id/mcq"
+        android:title="MCQ"
+        android:icon="@drawable/ic_mcq_black_24dp"
+        android:orderInCategory="3"></item>
+
+    <item android:id="@+id/watsnew"
+        android:title="New"
+        android:icon="@drawable/ic_star_black_24dp"
+        android:orderInCategory="4"></item>
+
+</menu>

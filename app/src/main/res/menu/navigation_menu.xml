@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/myStatus_id"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="My status">
+        </item>
+    </group>
+
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/aboutUs_id"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="About Us">
+        </item>
+        <item
+            android:id="@+id/aboutApp_id"
+            android:icon="@drawable/ic_star_black_24dp"
+            android:title="About App">
+        </item>
+
+        <item
+            android:id="@+id/feedback_id"
+            android:icon="@drawable/ic_feedback_black_24dp"
+            android:title="Feedback">
+        </item>
+    </group>
+
+
+
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/settings_id"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="Settings">
+        </item>
+    </group>
+
+</menu>
