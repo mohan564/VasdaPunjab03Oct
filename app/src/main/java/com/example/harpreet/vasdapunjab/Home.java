@@ -19,9 +19,9 @@ import me.relex.circleindicator.CircleIndicator;
 
 public class Home extends Fragment  {
 
-  /*  ViewPager viewPager;
+  ViewPager viewPager;
     PagerAdapter adapter;
-
+ /*
     int[] img;
 
     private  static  int currentpage=0;

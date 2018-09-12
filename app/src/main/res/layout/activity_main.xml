@@ -42,7 +42,9 @@
         app:itemBackground="@color/colorPrimary"
         app:itemIconTint="@color/TextOnPrimary"
         app:itemTextColor="@color/TextOnPrimary"
-        ></android.support.design.widget.BottomNavigationView>
+        >
+
+    </android.support.design.widget.BottomNavigationView>
 
 
 </LinearLayout>
