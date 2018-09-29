@@ -3,6 +3,7 @@ package com.example.harpreet.vasdapunjab;
 import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.NavigationView;
@@ -14,6 +15,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.Layout;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
@@ -148,5 +150,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    public void onC(View view) {
+        Intent intent = new Intent(this,ContentCourseForC.class);
+        startActivity(intent);
+    }
+
+    public void onCpp(View view) {
+        Intent intent = new Intent(this,ContentCourseForCPP.class);
+        startActivity(intent);
     }
 }

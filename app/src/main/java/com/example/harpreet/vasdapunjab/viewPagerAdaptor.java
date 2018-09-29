@@ -19,8 +19,8 @@ public class viewPagerAdaptor extends PagerAdapter {
     Context context;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
-    public viewPagerAdaptor(Home mainActivity, int[] img) {
-        this.context = mainActivity.getContext();
+    public viewPagerAdaptor(Home home, int[] img) {
+        this.context = home.getContext();
         this.image = img;
 
     }
