@@ -16,8 +16,14 @@ import android.support.v7.widget.Toolbar;
 import android.text.Layout;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener  {
@@ -28,6 +34,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     NavigationView navigationView;
     Layout layout;
     Fragment fragment;
+    FirebaseAuth auth;
+    FirebaseUser firebaseUser;
+    String email;
+    Button resend_mail;
 
     BottomNavigationView bottomNavigationView;
 
@@ -39,6 +49,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.navigation_drawer);
 
+
+
+        //email da naam fetch
+        email = getIntent().getExtras().getString("email");
+        resend_mail = findViewById(R.id.resend_mail);
 
 
 
@@ -110,10 +125,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         /////////
 
 
-
     }
 
-    // click lister on
+    // Navigation Drawer de click Listner Di coding
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -141,6 +155,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         {
             Toast.makeText(MainActivity.this, "Yet to create", Toast.LENGTH_SHORT).show();
         }
+        else if(id==R.id.logout_id)
+        {
+            logOutMethod();
+        }
 
         if(fragment!=null)
         {
@@ -152,6 +170,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
+    //Home ch C te c++ te Onclick methods
     public void onC(View view) {
         Intent intent = new Intent(this,ContentCourseForC.class);
         startActivity(intent);
@@ -161,4 +180,39 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Intent intent = new Intent(this,ContentCourseForCPP.class);
         startActivity(intent);
     }
+
+    //Verification mail send karn layi method
+    public void verify(View view)
+    {
+        auth = FirebaseAuth.getInstance();
+        firebaseUser = auth.getCurrentUser();
+
+
+        firebaseUser.sendEmailVerification().addOnCompleteListener(MainActivity.this, new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful())
+                {
+                    Toast.makeText(MainActivity.this, "Verification Email Sent To "+email, Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    Toast.makeText(MainActivity.this, "Email Sending Failed", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+
+    //Logout te click karn to baad method
+    public void logOutMethod()
+    {
+        auth = FirebaseAuth.getInstance();
+        firebaseUser = auth.getCurrentUser();
+
+        auth.signOut();
+
+    }
+
+
+
 }
