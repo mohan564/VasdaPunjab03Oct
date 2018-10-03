@@ -10,17 +10,22 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.content.Intent;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 import me.relex.circleindicator.CircleIndicator;
 
-public class Home extends Fragment {
 
+public class Home extends Fragment {
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Nullable
@@ -29,10 +34,9 @@ public class Home extends Fragment {
 
         final View view = inflater.inflate(R.layout.home, container, false);
 
-
         return view;
 
-
     }
+
     }
 

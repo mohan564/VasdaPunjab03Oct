@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.harpreet.vasdapunjab.First_Screen">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/inputName"
+        android:layout_marginTop="100dp"
+        android:layout_height="wrap_content">
+        <EditText
+            android:drawableLeft="@drawable/ic_person_black_24dp"
+            android:textSize="17sp"
+            android:layout_width="200dp"
+            android:hint="User Name"
+            android:maxLines="1"
+            android:inputType="text"
+            android:layout_gravity="center"
+            android:id="@+id/name"
+            android:layout_height="50sp" />
+
+    </android.support.design.widget.TextInputLayout>
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/inputPassword"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+        <EditText
+            android:drawableLeft="@drawable/ic_lock_black_24dp"
+            android:textSize="17sp"
+            android:layout_gravity="center"
+            android:layout_width="200dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:id="@+id/password"
+            android:layout_height="50sp" />
+
+    </android.support.design.widget.TextInputLayout>
+
+
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign In"
+        android:layout_marginTop="20dp"
+        android:id="@+id/sign_in"
+        android:onClick="signInMethod"
+        android:background="@color/colorPrimary"
+        android:textColor="#fff"
+        android:layout_gravity="center"/>
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Click Here to Join Us..."
+        android:textSize="25dp"
+        android:onClick="signUpMethod"
+        android:id="@+id/sign_up"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_gravity="center"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:text="Forgot your Password ?"
+        android:onClick="forgotPasswordMethod"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_gravity="center"/>
+
+
+
+
+
+
+</LinearLayout>

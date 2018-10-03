@@ -8,5 +8,7 @@
     <color name="colorSecondaryDark">#C85a54</color>
     <color name="TextOnPrimary">#FFFFFF</color>
     <color name="TextOnSecondary">#000000</color>
+    <color name="black">#000000</color>
+    <color name="gray">#dfdfdf</color>
 
 </resources>
